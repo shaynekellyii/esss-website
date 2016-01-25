@@ -1111,7 +1111,7 @@ $(document).ready(function(){
           $index = 0;
 
       // If the location.hash matches one of the links, use that as the active tab.
-      $active = $($links.filter('[src="/esss-website'+location.hash+'"]'));
+      $active = $($links.filter('[href="'+location.hash+'"]'));
 
       // If no match is found, use the first link or any with class 'active' as the initial active tab.
       if ($active.length === 0) {
@@ -1203,7 +1203,7 @@ $(document).ready(function(){
 
     },
     select_tab : function( id ) {
-      this.find('a[src="#' + id + '"]').trigger('click');
+      this.find('a[href="#' + id + '"]').trigger('click');
     }
   };
 
