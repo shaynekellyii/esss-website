@@ -1,21 +1,12 @@
 /* CODE ADDED BY ME, NOT PART OF MATERIALIZE FRAMEWORK */
 
 /* Sticky footer */
-html {
- 	position: relative; 
- 	min-height: 100%;
-}
-html, body {
- 	margin:0;
- 	padding:0;
-}
-.pageContentWrapper {
- 	margin-bottom: 50px; /* Height of footer*/
-} 
-.footer {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    height: 50px;
-}
+  body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+  }
+
+  main {
+    flex: 1 0 auto;
+  }
