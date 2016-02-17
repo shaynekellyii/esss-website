@@ -12,7 +12,7 @@
 		<title>Welcome</title>
     </head>
     <body>
-    	<header>
+    	<header ng-controller="HeadCtrl">
 			<!--Navbar-->
 			<ul id="about-dropdown" class="dropdown-content">
 				<li><a href="#!">Executives</a></li>
@@ -25,14 +25,18 @@
 							<div class="col s12">
 								<a href="/esss-website" class="brand-logo hide-on-med-and-down"><img src="/esss-website/img/logowhite.png" style="padding-top:7px;"></a>
 								<a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
-								<ul id="nav-mobile" class="right hide-on-med-and-down">
+								<!--<ul id="nav-mobile" class="right hide-on-med-and-down">
 									<li><a href="/esss-website/events.html">Events</a></li>
 									<li><a href="/esss-website/about.html">About us</a></li>
 									<li><a href="/esss-website/involved.html">Get involved</a></li>
 									<li><a href="/esss-website/essef.html">ESSEF</a></li>
 									<li><a href="/esss-website/opfair.html">opFair</a></li>
 									<li><a href="/esss-website/merch.html">Merchandise</a></li>
-									<p>angular test: 1 + 2 = {{ 1 + 2 }}</p>
+								</ul>-->
+								<ul id="nav-mobile" class="right hide-on-med-and-down">
+									<li ng-repeat="link in navLinks">
+										<a href={{link.ref}}>{{link.title}}</a>
+									</li>
 								</ul>
 								<ul class="side-nav" id="mobile-demo">
 									<li class="active"><a href="#!">Home</a></li>
@@ -177,5 +181,6 @@
 		<script type="text/javascript" src="/esss-website/js/materialize.js"></script>
 		<script type="text/javascript" src="/esss-website/js/script.js"></script>
 		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.1/angular.min.js"></script>
+		<script type="text/javascript" src="/esss-website/js/controllers.js"></script>
 	</body>
 </html>
