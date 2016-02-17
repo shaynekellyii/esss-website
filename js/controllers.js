@@ -1,18 +1,14 @@
 var esssApp = angular.module('esssApp', []);
 
-esssApp.controller('HeadCtrl', function ($scope) {
-  $scope.navLinks = [
-    {'ref': '/esss-website/events.html',
-     'title': 'Events'},
-    {'ref': '/esss-website/about.html',
-     'title': 'About us'},
-    {'ref': '/esss-website/involved.html',
-     'title': 'Get involved'},
-    {'ref': '/esss-website/essef.html',
-     'title': 'ESSEF'},
-    {'ref': '/esss-website/opfair.html',
-     'title': 'opFair'},
-    {'ref': '/esss-website/merch.html',
-	 'title': 'Merchandise'}
+esssApp.controller('SliderCtrl', function ($scope) {
+  $scope.slides = [
+    {'img': '/esss-website/banner1.jpg',
+     'align': 'center-align',
+     'title': 'Welcome',
+     'description': 'We are the Engineering Science Student Society of SFU.'},
+    {'img': '/esss-website/banner2.jpg',
+     'align': 'left-align',
+     'title': 'Get involved',
+     'description': 'Our Spring semester meetings are held Mondays at 1:30 in ASB 9705.'}
   ];
 });

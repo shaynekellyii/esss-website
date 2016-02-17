@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html ng-app="esssApp">
+<html ng-app="esss">
     <head>
 		<!--Import materialize.css-->
 		<link type="text/css" rel="stylesheet" href="/esss-website/css/materialize.css"  media="screen,projection"/>
@@ -12,7 +12,7 @@
 		<title>Welcome</title>
     </head>
     <body>
-    	<header ng-controller="HeadCtrl">
+    	<header>
 			<!--Navbar-->
 			<ul id="about-dropdown" class="dropdown-content">
 				<li><a href="#!">Executives</a></li>
@@ -25,18 +25,13 @@
 							<div class="col s12">
 								<a href="/esss-website" class="brand-logo hide-on-med-and-down"><img src="/esss-website/img/logowhite.png" style="padding-top:7px;"></a>
 								<a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
-								<!--<ul id="nav-mobile" class="right hide-on-med-and-down">
+								<ul id="nav-mobile" class="right hide-on-med-and-down">
 									<li><a href="/esss-website/events.html">Events</a></li>
 									<li><a href="/esss-website/about.html">About us</a></li>
 									<li><a href="/esss-website/involved.html">Get involved</a></li>
 									<li><a href="/esss-website/essef.html">ESSEF</a></li>
 									<li><a href="/esss-website/opfair.html">opFair</a></li>
 									<li><a href="/esss-website/merch.html">Merchandise</a></li>
-								</ul>-->
-								<ul id="nav-mobile" class="right hide-on-med-and-down">
-									<li ng-repeat="link in navLinks">
-										<a href={{link.ref}}>{{link.title}}</a>
-									</li>
 								</ul>
 								<ul class="side-nav" id="mobile-demo">
 									<li class="active"><a href="#!">Home</a></li>
@@ -55,42 +50,16 @@
 		</header>
 		
 		<main>
-			<div class="slider">
-						<ul class="slides">
-							<li>
-								<img src="/esss-website/img/banner1.jpg"> <!-- random image -->
-								<div class="caption center-align">
-									<!--<img src="/esss-website/img/Logo.png" width="10%">-->
-									<br>
-									<h3 class="white-text">Welcome</h3>
-									<h5 class="header white-text light">We are the Engineering Science Student Society of SFU.</h5>
-									<br>
-									<a href="/esss-website/about.html" class="btn-large waves-effect waves-light blue darken-1">About us</a>
-								</div>
-							</li>
-							<li>
-								<img src="/esss-website/img/banner2.jpg"> <!-- random image -->
-								<div class="caption left-align">
-									<h3 class="white-text">Get involved</h3>
-									<h5 class="header white-text light text-lighten-3">Our Spring semester meetings are held Mondays at 1:30 in ASB 9705.</h5>
-								</div>
-							</li>
-							<!--<li>
-								<img src="/esss-website/img/agm.jpg">
-								<div class="caption right-align">
-									<h3>Right Aligned Caption</h3>
-									<h5 class="light grey-text text-lighten-3">Here&#8217;s our small slogan.</h5>
-								</div>
-							</li>
-							<li>
-								<img src="/esss-website/img/agm2.jpg">
-								<div class="caption center-align">
-									<h3>This is our big Tagline!</h3>
-									<h5 class="light grey-text text-lighten-3">Here&#8217;s our small slogan.</h5>
-								</div>
-							</li>-->
-						</ul>
-					</div>
+			<div class="slider" ng-controller="SliderCtrl">
+				<ul class="slides">
+					<li ng-repeat="slide in slides">
+						<img src="{{slide.img}}">
+						<div class="caption {{slide.align}}">
+							<h3 class="white-text">{{slide.title}}</h3>
+							<h5 class="header white-text light text-lighten-3">{{slide.description}}>
+					</li>
+				</ul>
+			</div>
 			
 			<div class="container" id="news">
 				<div class="row">
