@@ -51,12 +51,32 @@
 		
 		<main>
 			<div class="slider" ng-controller="SliderCtrl">
-				<ul class="slides">
+				<ul>
 					<li ng-repeat="slide in slides">
-						<img src={{slide.img}}>
+						<img src="{{slide.img}}">
 						<div class="caption {{slide.align}}">
-							<h3 class="white-text">{{slide.title}}</h3>
-							<h5 class="header white-text light text-lighten-3">{{slide.description}}</h5>
+							<h3 class="white-text">{{title}}</h3>
+							<h5 class="header white-text light text-lighten-3">{{slide.description}}>
+					</li>
+				</ul>
+				<ul>
+					<li>
+						<img src="/esss-website/img/banner1.jpg"> <!-- random image -->
+						<div class="caption center-align">
+							<!--<img src="/esss-website/img/Logo.png" width="10%">-->
+							<br>
+							<h3 class="white-text">Welcome</h3>
+							<h5 class="header white-text light">We are the Engineering Science Student Society of SFU.</h5>
+							<br>
+							<a href="/esss-website/about.html" class="btn-large waves-effect waves-light blue darken-1">About us</a>
+						</div>
+					</li>
+					<li>
+						<img src="/esss-website/img/banner2.jpg"> <!-- random image -->
+						<div class="caption left-align">
+							<h3 class="white-text">Get involved</h3>
+							<h5 class="header white-text light text-lighten-3">Our Spring semester meetings are held Mondays at 1:30 in ASB 9705.</h5>
+						</div>
 					</li>
 				</ul>
 			</div>
