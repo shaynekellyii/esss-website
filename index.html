@@ -53,7 +53,7 @@
 			<div class="slider" ng-controller="SliderCtrl">
 				<ul>
 					<li ng-repeat="slide in slides">
-						<img src="{{slide.img}}">
+						<img ng-src="{{slide.img}}">
 						<div class="caption {{slide.align}}">
 							<h3 class="white-text">{{title}}</h3>
 							<h5 class="header white-text light text-lighten-3">{{slide.description}}>
